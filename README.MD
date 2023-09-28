@@ -10,4 +10,4 @@ It's tailored for Truenas Scale/Truecharts Custom App, but you can do whatever I
 
 You know what? If it wants to treat code as data, let it be so.
 Mount /app and /.cache as PVC, /app/tmp as emptyDir, /app/models and /app/outputs as hostpath.
-
+ORDER MATTERS, mount /app first.
