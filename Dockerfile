@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -y wget git python3 python3-pip python3-ve
 WORKDIR /bootstrap
 
 COPY ./bootstrap.sh /bootstrap/bootstrap.sh
-RUN chmod +X "/bootstrap/bootstrap.sh"
+RUN chmod +x "/bootstrap/bootstrap.sh"
 
 ENTRYPOINT [ "/bootstrap/bootstrap.sh", "--listen" ]
