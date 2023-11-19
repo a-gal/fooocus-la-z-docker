@@ -4,8 +4,13 @@ repo_url="https://github.com/lllyasviel/Fooocus.git"
 
 if [ ! -e /app/fooocus/entry_with_update.py ]; then
     echo "Script file does not exist. Cloning..."
-    rm -rf /app/fooocus
-    if ! git clone "$repo_url" /app/fooocus; then
+    cd /app/fooocus && \
+    git init && \
+    git remote add origin "$repo_url" && \
+    git fetch && \
+    git reset origin/main && \
+    git checkout -t origin/main
+    if $? -ne 0; then
         echo "Failed to clone repo"
         exit 1
     fi
