@@ -22,4 +22,4 @@ fi
 pip3 install -r /app/fooocus/requirements_versions.txt
 
 # Execute the script with the provided arguments
-python3 /app/fooocus/entry_with_update.py "$@"
+python3 /app/fooocus/launch.py "$@"
