@@ -19,7 +19,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: a-gal/stable-diffusion-webui-la-z-docker
+          images: a-gal/fooocus-la-z-docker
 
       - name: Build and push
         uses: docker/build-push-action@v4
