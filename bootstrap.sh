@@ -19,7 +19,8 @@ if [ ! -e /app/venv ]; then
 fi
 
 . /app/venv/bin/activate
-pip3 install -r /app/fooocus/requirements_versions.txt
+pip install -r /app/fooocus/requirements_versions.txt
 
+cd /app/fooocus
 # Execute the script with the provided arguments
-python3 /app/fooocus/launch.py "$@"
+python launch.py "$@"
