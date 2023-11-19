@@ -6,6 +6,8 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y python3 python3-pip git && \
     rm -rf /var/lib/apt/lists/*
 
+RUN --mount=type=cache,target=/root/.cache/pip pip3 install virtualenv
+
 WORKDIR /bootstrap
 
 COPY ./bootstrap.sh /bootstrap/bootstrap.sh
